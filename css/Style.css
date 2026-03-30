@@ -403,7 +403,9 @@ a {
     object-fit: cover;
     border-radius: 12px;
 }
-
+.img-02{
+    margin-top: 5%;
+}
 
 /* ── Promotional Section ── */
 .promo-section {
