@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="Assets/image/logo101.png" sizes="32x32">
     <link rel="stylesheet" href="css/Style.css">
+    <link rel="stylesheet" href="css/animation.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/reuse.css">
     <title>Lanka Drive</title>
 </head>
 
@@ -74,7 +78,7 @@
 
     <!--Main Section Code-->
     <main>
-        <section class="section section-surface">
+        <section class="section section-surface section-intro">
             <div class="section-content">
                 <span class="section-label">Welcome to LankaDrive</span>
                 <h1 class="section-title">The Art of the Drive</h1>
@@ -95,8 +99,141 @@
                 </div>
             </div>
             <div class="section-image">
-                
+                <img src="Assets/image/steering weel.jpg" alt="Image-01" class="img-01">
+                <img src="Assets/image/car-front.jpg" alt="Image-02" class="img-02">
             </div>
+        </section>
+        <section class="section section-surface section-featured ">
+            <div class="featured-header">
+                <div>
+                    <span class="section-label">Curated Collection</span>
+                    <h2 class="section-title">Featured Inventory</h2>
+                </div>
+                <a href="vehicles.html" class="view-all-link">View Full Inventory →</a>
+            </div>
+
+            <div class="featured-grid">
+
+                <div class="feat-card">
+                    <span class="feat-badge">Pre-Owned Luxury</span>
+                    <img src="Assets/image/img01.jpg" alt="2024 Grand Tourer Luxe">
+                    <div class="feat-card-body">
+                        <div class="feat-card-top">
+                            <h3 class="feat-card-name">2024 Grand Tourer Luxe</h3>
+                            <span class="feat-card-price">LKR 84.5M</span>
+                        </div>
+                        <div class="feat-chip-row">
+                            <span class="feat-chip">2024</span>
+                            <span class="feat-chip">V8 Biturbo</span>
+                            <span class="feat-chip">Petrol</span>
+                        </div>
+                        <a href="vehicles.html" class="feat-card-btn">View Details ↗</a>
+                    </div>
+                </div>
+
+                <div class="feat-card">
+                    <span class="feat-badge">Brand New</span>
+                    <img src="Assets/image/lexus_01.jpg" alt="Command SUV">
+                    <div class="feat-card-body">
+                        <div class="feat-card-top">
+                            <h3 class="feat-card-name">Command SUV</h3>
+                            <span class="feat-card-price">LKR 42.0M</span>
+                        </div>
+                        <div class="feat-chip-row">
+                            <span class="feat-chip">2024</span>
+                            <span class="feat-chip">Hybrid AWD</span>
+                            <span class="feat-chip">Hybrid</span>
+                        </div>
+                        <a href="vehicles.html" class="feat-card-btn">View Details ↗</a>
+                    </div>
+                </div>
+
+                <div class="feat-card">
+                    <span class="feat-badge">Pre-Owned Luxury</span>
+                    <img src="Assets/image/ferarri-hero.png" alt="Executive P8">
+                    <div class="feat-card-body">
+                        <div class="feat-card-top">
+                            <h3 class="feat-card-name">Executive P8</h3>
+                            <span class="feat-card-price">LKR 138.5M</span>
+                        </div>
+                        <div class="feat-chip-row">
+                            <span class="feat-chip">2024</span>
+                            <span class="feat-chip">V6 twin-turbo</span>
+                            <span class="feat-chip">Pre-Owned</span>
+                        </div>
+                        <a href="vehicles.html" class="feat-card-btn">View Details ↗</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <section class="promo-section">
+            <div class="promo-content">
+                <span class="promo-badge">Exclusive Opportunity</span>
+                <h2 class="promo-title">The 2024 Land Cruiser<br><span>Now Arriving</span></h2>
+                <p class="promo-text">Secure your spot for the first shipment of the all-new 2024
+                    LC300 units. Unrivaled luxury meets legendary capability.
+                    Financing options available with primary bank partners in Sri Lanka.</p>
+                <div class="promo-actions">
+                    <button class="btn-primary">Inquire Now</button>
+                    <a href="#" class="promo-link">Download Brochure</a>
+                </div>
+            </div>
+            <div class="promo-image">
+                <img src="Assets/image/land-crucer.jpg" alt="2024 Land Cruiser">
+            </div>
+        </section>
+
+        <section class="map-section">
+
+            <!-- Left: Map with address overlay -->
+            <div class="map-container">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15842.804691916443!2d79.86330542806779!3d6.926278575695923!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2slk!4v1774868641482!5m2!1sen!2slk"
+                    width="100%" height="100%" style="border: 0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+                <div class="map-address-card">
+                    <span class="map-address-label">Visit Our Flagship</span>
+                    <h3>452 Galle Rd, Colombo 03</h3>
+                    <p>Open Mon – Sat: 9:00 AM – 7:00 PM</p>
+                </div>
+            </div>
+
+            <!-- Right: Text + Form -->
+            <div class="map-right">
+                <div class="data-content">
+                    <h2 class="data-title">Start your journey today.</h2>
+                    <p class="data-text">Whether you're looking for a specific model or need advice on luxury
+                        automotive investments, our specialists are ready to assist.</p>
+                </div>
+
+                <form action="#" method="get" class="map-form">
+                    <div class="map-form-row">
+                        <div class="input-wrap">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" placeholder="Full Name">
+                        </div>
+                        <div class="input-wrap">
+                            <label for="phone">Phone</label>
+                            <input type="tel" id="phone" placeholder="+94 7X XXX XXXX">
+                        </div>
+                    </div>
+                    <div class="input-wrap">
+                        <label for="interest">Interest</label>
+                        <select id="interest" name="interest">
+                            <option value="" class="placeholder">View Current Inventory</option>
+                            <option value="ferrari">Ferrari</option>
+                            <option value="bmw">BMW</option>
+                            <option value="porsche">Porsche</option>
+                            <option value="pagani">Pagani</option>
+                            <option value="ford">Ford</option>
+                        </select>
+                    </div>
+                    <button type="submit">Submit Inquiry</button>
+                </form>
+            </div>
+
         </section>
     </main>
 
