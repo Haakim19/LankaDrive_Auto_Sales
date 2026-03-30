@@ -1,0 +1,90 @@
+/* ---------- Header / Navbar ---------- */
+.site-header {
+	position: fixed;
+	top: 15px;
+	left: 16px;
+	right: 16px;
+	z-index: 1000;
+	display: flex;
+	align-items: center;
+	gap: 20px;
+	padding: 10px 20px;
+	background: rgba(0, 0, 0, 0);
+	backdrop-filter: blur(6px);
+	border-radius: 5px;
+}
+
+.header-brand {
+	flex-shrink: 0;
+}
+
+.brand-link {
+	display: inline-flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.brand-logo {
+	width: 42px;
+	height: 42px;
+	object-fit: contain;
+}
+
+.brand-name {
+	font-family: "Space Grotesk", sans-serif;
+	font-size: 1.05rem;
+	font-weight: 700;
+	color: #ffffff;
+}
+
+.main-nav {
+	flex: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 18px;
+	flex-wrap: wrap;
+}
+
+.main-nav a {
+	position:relative;
+	font-family: "Space Grotesk", sans-serif;
+	font-size: 0.72rem;
+	letter-spacing: 0.2em;
+	text-transform: uppercase;
+	color: rgba(255, 255, 255, 0.92);
+	padding: 6px 2px;
+}
+
+.main-nav a[aria-current="page"],
+.main-nav a:hover {
+	color: #ffffff;
+}
+
+.main-nav a[aria-current="page"]::after,
+.main-nav a:hover::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: -2px;
+	height: 2px;
+	background: #ccd4ee;
+}
+
+.header-btn {
+	display: inline-flex;
+	align-items: center;
+	gap: 5px;
+	flex-shrink: 0;
+}
+
+.nav-hamburger {
+	display: none;
+	font-size: 1.4rem;
+	line-height: 1;
+	cursor: pointer;
+	color: #ffffff;
+	padding: 4px 6px;
+	user-select: none;
+}
