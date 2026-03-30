@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap");
 
-/* ---------- Basic Reset ---------- */
 * {
 	margin: 0;
 	padding: 0;
@@ -115,6 +114,91 @@ a {
 	padding: 4px 6px;
 	user-select: none;
 }
+/*------------------------------------------------------------------*/
+
+/* --------------------------------- Footer ------------------------------------------ */
+.site-footer {
+	margin-top: 40px;
+	padding: 48px 32px;
+	background: #f0f4f7;
+}
+
+.footer-inner {
+	max-width: 1280px;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: 1.3fr 1fr 1.2fr;
+	gap: 24px;
+}
+
+.site-footer h3,
+.site-footer h4 {
+	margin-bottom: 12px;
+	color: #1f2b3f;
+	font-family: "Space Grotesk", sans-serif;
+}
+
+.site-footer h4 {
+	font-size: 0.78rem;
+	font-weight: 600;
+	letter-spacing: 0.16em;
+	text-transform: uppercase;
+}
+
+.site-footer p {
+	margin-bottom: 10px;
+	color: #5c6a7f;
+	font-size: 0.92rem;
+	line-height: 1.65;
+}
+
+.social-links {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	margin-top: 14px;
+}
+
+.social-links a {
+	padding: 8px 10px;
+	border-radius: 4px;
+	border: 1px solid rgba(169, 180, 185, 0.15);
+	background: #ffffff;
+	color: #526074;
+	font-family: "Space Grotesk", sans-serif;
+	font-size: 0.7rem;
+	letter-spacing: 0.18em;
+	text-transform: uppercase;
+}
+
+.social-links a:hover {
+	color: #1f2b3f;
+}
+
+.newsletter-form {
+	display: grid;
+	grid-template-columns: 1fr auto;
+	gap: 8px;
+}
+
+.newsletter-form button {
+	min-height: 42px;
+	padding: 0 16px;
+	border: 0;
+	border-radius: 4px;
+	cursor: pointer;
+	color: #ffffff;
+	background: linear-gradient(130deg, #565e74, #4a5268);
+	font-family: "Space Grotesk", sans-serif;
+	font-size: 0.7rem;
+	letter-spacing: 0.16em;
+	text-transform: uppercase;
+}
+
+.newsletter-form button:hover {
+	filter: brightness(1.06);
+}
+/*----------------------------------------------------------------------------------*/
 
 /* ---------- Buttons ---------- */
 .btn-primary,
@@ -159,114 +243,206 @@ a {
 	cursor: not-allowed;
 }
 
-/* ---------- Hero ---------- */
+/* ---------------------------- Hero ------------------------------------ */
+/* ── Hero Section ── */
 .Hero {
-	position: relative;
-	width: 100%;
-	min-height: 700px;
-	overflow: hidden;
+    position: relative;
+    width: 100%;
+    min-height: 700px;
+    overflow: hidden;
 }
 
+/* Dark gradient overlay on the left side */
 .Hero::after {
-	content: "";
-	position: absolute;
-	inset: 0;
-	z-index: 2;
-	pointer-events: none;
-	background: linear-gradient(
-		90deg,
-		rgba(47, 26, 21, 0.58) 0%,
-		rgba(47, 26, 21, 0.34) 25%,
-		rgba(47, 26, 21, 0.08) 75%,
-		rgba(47, 26, 21, 0) 100%
-	);
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    pointer-events: none;
+    background: linear-gradient(
+        90deg,
+        rgba(47, 26, 21, 0.58) 0%,
+        rgba(47, 26, 21, 0.34) 25%,
+        rgba(47, 26, 21, 0.08) 75%,
+        rgba(47, 26, 21, 0.00) 100%
+    );
 }
 
 .Hero-image {
-	width: 100%;
-	height: 800px;
-	object-fit: cover;
+    width: 100%;
+    height: 800px;
+    object-fit: cover;
 }
 
-.hero-paragraph,
-.Hero h1 {
-	position: absolute;
-	z-index: 3;
-	left: 90px;
-	margin: 0;
-	font-family: "Space Grotesk", sans-serif;
-    top:100px
+
+/* ── Hero Content (single container, replaces individual absolute positions) ── */
+.hero-content {
+    position: absolute;
+    z-index: 3;
+    left: 90px;
+    top: 170px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    font-family: "Space Grotesk", sans-serif;
 }
 
 .hero-paragraph {
-	top: 220px;
-	font-size: 1rem;
-	letter-spacing: 0.24em;
-	text-transform: uppercase;
-	color: rgba(247, 249, 251, 0.95);
+    margin: 0;
+    font-size: 1rem;
+    letter-spacing: 0.24em;
+    
+    color: rgba(247, 249, 251, 0.95);
 }
-.p2{
+.p1{
+    text-transform: uppercase;
+}
+/* Subtitle paragraph */
+.p2 {
+    margin-top: 16px;
     font-size: 0.9rem;
-    top: 520px;
     text-transform: none;
     letter-spacing: 0.08em;
     line-height: 1.7;
-    max-width: 620px;
-
+    max-width: 600px;
 }
 
+.Hero h1 {
+    margin: 8px 0 0;
+    font-size: 5.4rem;
+    max-width: 12ch;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    color: #ffffff;
+}
+
+/* Italic coloured word inside h1 */
+.Hero h1 span {
+    color: #ccd4ee;
+    font-style: italic;
+}
+
+
+/* ── Hero Buttons ── */
 .hero-actions {
-	position: absolute;
-	z-index: 3;
-	left: 90px;
-	top: 650px;
-	display: flex;
-	gap: 12px;
-	align-items: center;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin-top: 32px;
 }
 
-.Hero .hero-actions .btn-primary img {
-	width: 18px;
-	height: 18px;
-	margin-left: 8px;
+/* Arrow icon inside the primary button */
+.hero-actions .btn-primary img {
+    width: 18px;
+    height: 18px;
+    margin-left: 8px;
 }
+
+/* Swap arrow icon on hover */
 .hover-img { display: none; }
 .btn-primary:hover .default-img { display: none; }
 .btn-primary:hover .hover-img { display: inline-block; }
 
 
-
-.Hero h1 {
-	top: 250px;
-	max-width: 12ch;
-	font-size: 5.4rem;
-	line-height: 1.05;
-	letter-spacing: -0.02em;
-	color: #ffffff;
-    
-    
+/* ── Stats Bar (bottom-right of hero) ── */
+.stats-bar {
+    position: absolute;
+    z-index: 3;
+    bottom: 40px;
+    right: 80px;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(8px);
 }
 
-.Hero h1 span {
-	color: #ccd4ee;
-    font-style: italic;
+.stat-item {
+    text-align: center;
+    padding: 0 15px;
+    border-right: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.stat-item:last-child {
+    border-right: none;
+}
+
+.stat-number {
+    font-size: 36px;
+    font-weight: 700;
+    color: #f8fafc;
+    margin: 0;
+}
+
+.stat-label {
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.5);
+    margin: 6px 0 0;
+}
+/*-----------------------------------------------------------------------------------*/
+
+/*-------main---------*/
+.profile-img {
+    margin-top: 10px;
+    width: 60px;
+    height: 60px;
+    object-fit: cover;        
+    border-radius: 20%;       
+    display: block;
+}
+.profile-bar{
+    display: flex;
+    gap: 3%;
+}
+.profile-bar .profile-item{
+    margin-top: 6px;
+}
+.profile-item h2{
+    font-size: 1.4rem;
+    font-family: "Space Grotesk", sans-serif;
+    color: #1f2b3f;
+}
+.profile-item p{
+    margin-top: -3px;
+    font-family: "Space Grotesk", sans-serif;
+    color: #1f2b3f56;
 }
 
 /* ---------- Generic Content ---------- */
 .section {
-	max-width: 1280px;
+	max-width: 100%;
 	margin: 0 auto;
 	padding: 48px 32px;
+    margin-top: 2%;
 }
 
 .section-surface {
-	background: #f0f4f7;
+	background: linear-gradient(
+        180deg,
+        #f7f9fb 0%,
+        #d8e0e8 25%,
+        #d8e0e8 50%,
+        #d8e0e8 75%,
+        #f7f9fb 100%
+    ) ;
+}
+
+.section-content{
+    width: 50%;
+    max-width: 600px;
+    background-color:#1d252906;
+    margin-left: 5%;
+    padding: 20px 20px 20px 20px; 
+    border-radius: 10px;
 }
 
 .section-title {
-	margin-bottom: 16px;
+	margin-bottom: 10px;
 	font-family: "Space Grotesk", sans-serif;
-	font-size: 2.25rem;
+	font-size: 2.5rem;
 	letter-spacing: -0.02em;
 }
 
@@ -275,9 +451,15 @@ a {
 	margin-bottom: 12px;
 	color: #526074;
 	font-family: "Space Grotesk", sans-serif;
-	font-size: 0.72rem;
+	font-size: 1rem;
 	letter-spacing: 0.24em;
-	text-transform: uppercase;
+}
+.section-paragraph{
+    color: #526074;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    font-family:sans-serif;
 }
 
 .card-grid {
@@ -360,88 +542,7 @@ a {
 	border-bottom-color: #565e74;
 }
 
-/* ---------- Footer ---------- */
-.site-footer {
-	margin-top: 40px;
-	padding: 48px 32px;
-	background: #f0f4f7;
-}
 
-.footer-inner {
-	max-width: 1280px;
-	margin: 0 auto;
-	display: grid;
-	grid-template-columns: 1.3fr 1fr 1.2fr;
-	gap: 24px;
-}
-
-.site-footer h3,
-.site-footer h4 {
-	margin-bottom: 12px;
-	color: #1f2b3f;
-	font-family: "Space Grotesk", sans-serif;
-}
-
-.site-footer h4 {
-	font-size: 0.78rem;
-	font-weight: 600;
-	letter-spacing: 0.16em;
-	text-transform: uppercase;
-}
-
-.site-footer p {
-	margin-bottom: 10px;
-	color: #5c6a7f;
-	font-size: 0.92rem;
-	line-height: 1.65;
-}
-
-.social-links {
-	display: flex;
-	flex-wrap: wrap;
-	gap: 10px;
-	margin-top: 14px;
-}
-
-.social-links a {
-	padding: 8px 10px;
-	border-radius: 4px;
-	border: 1px solid rgba(169, 180, 185, 0.15);
-	background: #ffffff;
-	color: #526074;
-	font-family: "Space Grotesk", sans-serif;
-	font-size: 0.7rem;
-	letter-spacing: 0.18em;
-	text-transform: uppercase;
-}
-
-.social-links a:hover {
-	color: #1f2b3f;
-}
-
-.newsletter-form {
-	display: grid;
-	grid-template-columns: 1fr auto;
-	gap: 8px;
-}
-
-.newsletter-form button {
-	min-height: 42px;
-	padding: 0 16px;
-	border: 0;
-	border-radius: 4px;
-	cursor: pointer;
-	color: #ffffff;
-	background: linear-gradient(130deg, #565e74, #4a5268);
-	font-family: "Space Grotesk", sans-serif;
-	font-size: 0.7rem;
-	letter-spacing: 0.16em;
-	text-transform: uppercase;
-}
-
-.newsletter-form button:hover {
-	filter: brightness(1.06);
-}
 
 /* ---------- Focus ---------- */
 .btn-primary:focus-visible,
