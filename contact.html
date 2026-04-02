@@ -8,12 +8,13 @@
     <link rel="stylesheet" href="css/Style.css">
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/contact.css">
     <link rel="stylesheet" href="css/reuse.css">
     <title>Contact Us</title>
 </head>
 
 <body>
-    <!--Navigation Bar Code Hear-->
+    <!-- Site Header -->
     <header class="site-header">
         <div class="header-brand">
             <a href="index.html" class="brand-link">
@@ -39,20 +40,111 @@
         </div>
     </header>
 
-    <!--Hero Section Code-->
-    <section class="Hero" aria-label="Hero banner">
-        <img class="Hero-image" src="Assets/image/supra.jpg" alt="Hero-Img">
+    <!-- Hero Section -->
+    <section class="hero" aria-label="Hero banner">
+        <img class="hero-image" src="Assets/image/contect.jpg" alt="Hero-Img">
         <div class="hero-content">
-            <p class="hero-paragraph p1">Colombo's premier destination</p>
-            <h1>Engineered <span>Excellence</span></h1>
+            <p class="hero-paragraph p1">Get in Touch</p>
+            <h1>Precision Service<br> Meets Your <span>Ambition.</span></h1>
         </div>
+        <p class="hero-paragraph hero-right-text">Whether you are ready to aqure a new vehicle or simply exploring
+            options.
+            our dedicated team provides personalized guidence for your automitive journey.
+        </p>
     </section>
 
-    <!--Main Section Code-->
-    <main></main>
+    <!-- Main Content -->
+    <main>
+        <div class="contact-wrapper">
+            <section class="contect">
+                <div class="contect-bar">
+                    <img src="Assets/icons/location_chip_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" alt="Location-img">
+                    <div class="contect-item">
+                        <h3>Flagship Store</h3>
+                        <p>Address 452 Galle Rd, Colombo 03, Sri Lanka</p>
+                        <a href="">VIEW ON MAP</a>
+                    </div>
+                </div>
+                <div class="contect-bar">
+                    <img src="Assets/icons/call_32dp_000000_FILL0_wght400_GRAD0_opsz40.svg" alt="call">
+                    <div class="contect-item">
+                        <h3>Direct Line</h3>
+                        <p>Phone +94 11 223 3445 / +94 77 456 7890</p>
+                        <p>Mon - Sat 08:00 - 19:00</p>
+                    </div>
+                </div>
+                <div class="contect-bar">
+                    <img src="Assets/icons/mail_32dp_000000_FILL0_wght400_GRAD0_opsz40.svg" alt="email">
+                    <div class="contect-item">
+                        <h3>Email Inquiries</h3>
+                        <p>sales@lankadrive.com</p>
+                    </div>
+                </div>
+            </section>
 
+            <section class="contect-form">
+                <form action="#" method="get" class="contect-form">
+                    <div class="contect-form-row">
+                        <div class="input-wrap">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" placeholder="Full Name">
+                        </div>
+                        <div class="input-wrap">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" placeholder="exampl@mail.com">
+                        </div>
+                    </div>
+                    <div class="contect-form-row">
+                        <div class="input-wrap">
+                            <label for="contectNo">Contect No</label>
+                            <input type="tel" id="contectNo" placeholder="+94 xx xx xxxx">
+                        </div>
+                        <div class="input-wrap">
+                            <label for="interest">Vehicle Interest</label>
+                            <select id="interest" name="interest">
+                                <option value="" disabled selected id="placeholder">Choose The Vehicle</option>
+                                <option value="ferrari">Ferrari</option>
+                                <option value="bmw">BMW</option>
+                                <option value="porsche">Porsche</option>
+                                <option value="pagani">Pagani</option>
+                                <option value="ford">Ford</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="input-wrap">
+                        <label>Primary Intent</label>
+                        <div class="radio-group">
+                            <label>
+                                <input type="radio" name="intent" value="purchase">
+                                Buy a Vehicle
+                            </label>
+                            <label>
+                                <input type="radio" name="intent" value="testdrive">
+                                Request Test Drive
+                            </label>
+                        </div>
+                    </div>
+                    <div class="input-wrap">
+                        <label for="msg">Message / Technical Requirments</label>
+                        <div>
+                            <textarea name="msg" id="msg" rows="10" placeholder="How Can Our Technical Team Assist You?"
+                                cols="50"></textarea>
+                        </div>
+                    </div>
+                    <div class="contect-form-bottom">
+                        <div class="checkbox-wrap">
+                            <input type="checkbox" id="newsletter" name="newsletter">
+                            <label for="newsletter">I would like to receive curated news and exclusive offers from
+                                LankaDrive.</label>
+                        </div>
+                        <button type="submit">Send Inquiry →</button>
+                    </div>
+                </form>
+            </section>
+        </div>
+    </main>
 
-    <!--Footer Code Hear-->
+    <!-- Site Footer -->
     <footer class="site-footer">
         <div class="footer-inner">
             <div class="footer-brand">
