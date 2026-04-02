@@ -80,3 +80,20 @@
 .newsletter-form button:hover {
 	filter: brightness(1.06);
 }
+
+/* ---------- Forms ---------- */
+.newsletter-form input {
+    width: 100%;
+    padding: 12px 14px;
+    border: 0;
+    border-bottom: 2px solid transparent;
+    border-radius: 4px;
+    background: #ffffff;
+    color: #1f2b3f;
+    font: inherit;
+}
+
+.newsletter-form input:focus {
+    outline: none;
+    border-bottom-color: #565e74;
+}
