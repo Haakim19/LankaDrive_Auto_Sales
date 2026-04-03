@@ -1,0 +1,261 @@
+.hero {
+    position: relative;
+    width: 100%;
+    min-height: 650px;
+    overflow: hidden;
+    background: linear-gradient(90deg,
+            rgba(47, 26, 21, 0.58) 0%,
+            rgba(47, 26, 21, 0.34) 25%,
+            rgba(47, 26, 21, 0.08) 75%,
+            rgba(47, 26, 21, 0) 100%);
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    pointer-events: none;
+
+}
+
+.hero-image {
+    width: 100%;
+    height: 650px;
+    object-fit: cover;
+}
+
+/* Hero content wrapper */
+.hero-content {
+    position: absolute;
+    z-index: 3;
+    left: 90px;
+    top: 170px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-family: "Space Grotesk", sans-serif;
+}
+
+.hero-paragraph {
+    margin: 0;
+    font-size: 1rem;
+    letter-spacing: 0.19em;
+    color: rgba(247, 249, 251, 0.95);
+    max-width: 60ch;
+}
+
+.hero h1 {
+    margin: 8px 0 0;
+    font-size: 5.4rem;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    color: #ffffff;
+}
+
+/* Italic coloured word inside h1 */
+.hero h1 span {
+    color: #ccd4ee;
+    font-style: italic;
+}
+
+.video-review {
+    display: flex;
+    gap: 40px;
+    margin-left: 2%;
+    margin-right: 2%;
+
+}
+
+video {
+    width: 800px;       
+    height: auto;       
+    border-radius: 20px;
+    flex-shrink: 0;     
+    align-self: center;
+}
+
+.review-img {
+    height: 50px;
+    width: 50px;
+    border-radius: 10px;
+}
+
+.review-content h2 {
+    color: #1d2529;
+    font-size: 2.4rem;
+    font-family: "Space Grotesk", sans-serif;
+}
+
+.review-content .P1 {
+    color: #84a8bb;
+    font-size: 0.9rem;
+    font-family: sans-serif;
+    font-style: italic;
+    letter-spacing: 0.09rem;
+}
+
+.review-profile {
+    padding-top: 10px;
+    display: flex;
+    gap: 20px;
+}
+
+.profil-detais {
+    gap: -10px;
+}
+
+.review-content h4 {
+    color: #1d2529;
+    font-size: 1.1rem;
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: bold;
+}
+
+.review-content .P2 {
+    color: #1d25293a;
+    font-size: 0.9rem;
+    font-family: "Space Grotesk", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+}
+
+/*review cards*/
+
+.review-grid {
+    display: flex;
+    gap: 20px;
+    padding: 40px 2%;
+    background: #f8fafc;    /* was missing # */
+    align-items: stretch;   /* change to stretch for equal height cards */
+    height: 450px;
+    margin:0 2% 0 ;
+}
+
+.review-card {
+    background: rgba(204, 212, 238, 0.5);
+    border-radius: 12px;
+    padding: 30px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Stars */
+.star {
+    font-size: 1.2rem;
+    color: #3a3f5a;
+}
+
+.star.filled {
+    color: #f5c518;
+}
+
+/* Review text */
+.review-paragraph {
+    color: #02081a;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    flex-grow: 1;
+}
+
+/* Divider */
+.reviwer-details {
+    display: flex;
+    flex-direction: row;
+    border-top: 1px solid #1e3a5f;
+    padding-top: 15px;
+    justify-content: space-between;
+}
+
+/* Reviewer name */
+.reviwer-name {
+    color: #3344ac6a;
+    font-size: 1rem;
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+/* Car detail */
+.car-detail {
+    color: #8892b0;
+    font-size: 0.75rem;
+    font-family: "Space Grotesk", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+.reviwer{
+    display: flex;
+    flex-direction: column;
+}
+.varified{
+    width: 40px;
+    height: 40px;
+    color: #8892b0;
+}
+
+
+.elite-banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(204, 212, 238, 0.5);
+    border-radius: 16px;
+    padding: 30px 40px;
+    margin: 40px 4%;
+    gap: 40px;
+}
+
+.elite-text h2 {
+    color: #000000;
+    font-size: 1.4rem;
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.elite-text p {
+    color: #8892b0;
+    font-size: 0.85rem;
+    max-width: 220px;
+    line-height: 1.5;
+}
+
+.elite-stats {
+    display: flex;
+    gap: 40px;
+}
+
+.stat h3 {
+    color: #000000;
+    font-size: 1.8rem;
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 700;
+}
+
+.stat p {
+    color: #8892b0;
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.review-btn {
+    background: #e8eaf6;
+    color: #3d5af1;
+    border: none;
+    border-radius: 50px;
+    padding: 16px 28px;
+    font-size: 0.95rem;
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.review-btn:hover {
+    background: #c5caf5;
+    transition: background 0.3s ease;
+}
