@@ -32,7 +32,7 @@
 
 .brand-name {
 	font-family: "Space Grotesk", sans-serif;
-	font-size: 1.05rem;
+	font-size: 1.3rem;
 	font-weight: 700;
 	color: #ffffff;
 }
@@ -44,16 +44,18 @@
 	align-items: center;
 	gap: 18px;
 	flex-wrap: wrap;
+	margin-left: 6%;
 }
 
 .main-nav a {
 	position:relative;
 	font-family: "Space Grotesk", sans-serif;
-	font-size: 0.72rem;
+	font-size: 0.8rem;
 	letter-spacing: 0.2em;
 	text-transform: uppercase;
 	color: rgba(255, 255, 255, 0.92);
 	padding: 6px 2px;
+	font-weight:bolder;
 }
 
 .main-nav a[aria-current="page"],
