@@ -94,7 +94,7 @@
 
 .feat-card {
     position: relative;
-    background: #2a355047;
+    background: #ccd4eb;
     border-radius: 16px;
     overflow: hidden;
 }
@@ -124,7 +124,7 @@
     font-family: "Space Grotesk", sans-serif;
     font-size: 1rem;
     font-weight: 600;
-    color: #ffffff;
+    color: #120e0e;
     margin: 0;
 }
 
@@ -155,7 +155,7 @@
     display: inline-block;
     padding: 10px 0;
     border-top: 1px solid rgba(255, 255, 255, 0.08);
-    color: #ffffff;
+    color: #000000;
     font-size: 0.75rem;
     letter-spacing: 0.15em;
     text-transform: uppercase;
@@ -163,7 +163,7 @@
 }
 
 .feat-card-btn:hover {
-    color: #ccd4ee;
+    color: #ffffff;
 }
 
 .feat-badge {
