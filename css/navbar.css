@@ -31,12 +31,17 @@
 }
 
 .brand-name {
-	font-family: "Space Grotesk", sans-serif;
-	font-size: 1.3rem;
-	font-weight: 700;
-	color: #ffffff;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1.2;
 }
-
+.brand-sub {
+    color: #a0aec0;    /* muted gray — change to any color you want */
+    font-size: 0.85rem;
+    font-weight: 400;
+}
 .main-nav {
 	flex: 1;
 	display: flex;
