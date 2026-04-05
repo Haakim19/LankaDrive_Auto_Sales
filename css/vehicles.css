@@ -1,3 +1,10 @@
+/* ================================================
+   VEHICLES.CSS - Vehicle Listings Page Styles
+   Purpose: Styles for vehicle cards, grid layout,
+   and listing details display
+   ================================================ */
+
+/* ===== Hero Section ===== */
 .hero {
     position: relative;
     width: 100%;
@@ -101,6 +108,22 @@
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
     display: flex;
     flex-direction: column;
+    animation: slideInUp 0.6s ease-out backwards;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Stagger animation for each card */
+.vehicle-card:nth-child(1) { animation-delay: 0.1s; }
+.vehicle-card:nth-child(2) { animation-delay: 0.2s; }
+.vehicle-card:nth-child(3) { animation-delay: 0.3s; }
+.vehicle-card:nth-child(4) { animation-delay: 0.4s; }
+.vehicle-card:nth-child(5) { animation-delay: 0.5s; }
+.vehicle-card:nth-child(6) { animation-delay: 0.6s; }
+
+/* Hover effect - lift card */
+.vehicle-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
 }
 
 /* Car Image */
@@ -268,4 +291,107 @@
     font-family: "Space Grotesk", sans-serif;
     background:rgb(255, 255, 255);
     color:#6b7280;
+}
+
+/* ================================================
+   RESPONSIVE DESIGN - Vehicles Page
+   ================================================ */
+
+/* Tablet (768px and below) */
+@media (max-width: 768px) {
+    .vehicle-section {
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+        padding: 20px 12px;
+    }
+
+    .end-section {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .left-side,
+    .right-side {
+        flex: 1;
+        width: 100%;
+    }
+
+    .right-side-btn {
+        flex-direction: column;
+    }
+}
+
+/* Mobile (600px and below) */
+@media (max-width: 600px) {
+    .hero {
+        min-height: 300px;
+    }
+
+    .hero-image {
+        height: 300px;
+    }
+
+    .vehicle-section {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        padding: 15px 8px;
+    }
+
+    .vehicle-card button {
+        font-size: 0.7rem;
+        padding: 8px 12px;
+    }
+
+    .end-section {
+        padding: 20px 12px;
+    }
+
+    .right-side-btn input {
+        font-size: 0.85rem;
+        padding: 10px;
+    }
+
+    .right-side-btn button{
+        font-size: 0.75rem;
+        padding: 10px;
+    }
+}
+
+/* Small Mobile (360px and below) */
+@media (max-width: 360px) {
+    .hero {
+        min-height: 250px;
+    }
+
+    .hero-image {
+        height: 250px;
+    }
+
+    .vehicle-section {
+        padding: 10px 6px;
+        gap: 10px;
+    }
+
+    .vehicle-card {
+        padding: 10px;
+    }
+
+    .vehicle-spec {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .spec-item {
+        flex: 1;
+    }
+
+    .right-side-btn input {
+        font-size: 0.8rem;
+        width: 100%;
+    }
+
+    .right-side-btn button {
+        font-size: 0.7rem;
+        width: 100%;
+    }
 } 

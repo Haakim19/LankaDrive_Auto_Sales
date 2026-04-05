@@ -140,6 +140,20 @@ video {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    animation: slideInUp 0.6s ease-out backwards;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+/* Stagger animations for review cards */
+.review-card:nth-child(1) { animation-delay: 0.1s; }
+.review-card:nth-child(2) { animation-delay: 0.2s; }
+.review-card:nth-child(3) { animation-delay: 0.3s; }
+
+/* Hover effect - lift card */
+.review-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
 }
 
 /* Stars */
@@ -251,4 +265,102 @@ video {
     font-weight: 700;
     cursor: pointer;
     white-space: nowrap;
+}
+
+/* ================================================
+   RESPONSIVE DESIGN - Reviews Page
+   ================================================ */
+
+/* Tablet (768px and below) */
+@media (max-width: 768px) {
+    .video-review {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px 12px;
+    }
+
+    .video-review video {
+        width: 100%;
+        height: auto;
+    }
+
+    .review-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+}
+
+/* Mobile (600px and below) */
+@media (max-width: 600px) {
+    .hero {
+        min-height: 300px;
+    }
+
+    .hero-image {
+        height: 300px;
+    }
+
+    .review-card {
+        padding: 16px;
+    }
+
+    .stars {
+        font-size: 1.2rem;
+        gap: 4px;
+    }
+
+    .review-paragraph {
+        font-size: 0.85rem;
+        line-height: 1.4;
+    }
+
+    .reviwer-name {
+        font-size: 0.9rem;
+    }
+
+    .car-detail {
+        font-size: 0.8rem;
+    }
+
+    .elite-stats {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .review-btn {
+        font-size: 0.7rem;
+        padding: 10px 12px;
+    }
+}
+
+/* Small Mobile (360px and below) */
+@media (max-width: 360px) {
+    .review-card {
+        padding: 12px;
+    }
+
+    .review-paragraph {
+        font-size: 0.8rem;
+    }
+
+    .reviwer-name {
+        font-size: 0.85rem;
+    }
+
+    .elite-banner {
+        text-align: center;
+    }
+
+    .elite-text h2 {
+        font-size: 1.3rem;
+    }
+
+    .elite-text p {
+        font-size: 0.8rem;
+    }
+
+    .review-btn {
+        width: 100%;
+        font-size: 0.65rem;
+    }
 }

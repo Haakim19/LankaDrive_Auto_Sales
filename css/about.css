@@ -1,3 +1,10 @@
+/* ================================================
+   ABOUT.CSS - About Us Page Styles
+   Purpose: Styles for company introduction,
+   mission/vision, and value proposition sections
+   ================================================ */
+
+/* ===== About Section Cards ===== */
 .about-section-card{
     display: flex;
     flex-direction: column;
@@ -34,7 +41,21 @@
     gap: 20px;
     height: 20rlh;
     border-radius: 10px;
+    animation: slideInUp 0.6s ease-out backwards;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+/* Stagger animations for about cards */
+.card-row-one .about-card:nth-child(1) { animation-delay: 0.1s; }
+.card-row-one .about-card:nth-child(2) { animation-delay: 0.2s; }
+.card-row-two .about-card:nth-child(1) { animation-delay: 0.3s; }
+.card-row-two .about-card:nth-child(2) { animation-delay: 0.4s; }
+
+/* Hover effect - lift card */
+.about-card:hover {
+    transform: translateY(-6px);
+}
+
 .about-card .showroom{
     object-fit: cover;
     height: 100%;
@@ -148,6 +169,7 @@
     font-weight: 600;
     letter-spacing: 0.1em;
     text-transform: uppercase;
+    border-radius: 10px;
     cursor: pointer;
     white-space: nowrap;
     margin-top: 10px;
@@ -163,6 +185,23 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 24px;
+}
+
+.why-card {
+    animation: slideInUp 0.6s ease-out backwards;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Stagger animation for why cards */
+.why-card:nth-child(1) { animation-delay: 0.1s; }
+.why-card:nth-child(2) { animation-delay: 0.2s; }
+.why-card:nth-child(3) { animation-delay: 0.3s; }
+.why-card:nth-child(4) { animation-delay: 0.4s; }
+
+/* Hover effect - lift card and add shadow */
+.why-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
 }
 
 .why-card img {
@@ -221,7 +260,132 @@
     
 }
 
-.btn-presition{
+/* Fixed: Typo in class name - ".btn-presition" is unused, renamed to ".btn-precision" for clarity */
+.btn-precision{
     color: #1a2035;
     border-color: #1a2035;
+}
+
+/* ================================================
+   RESPONSIVE DESIGN - About Page
+   ================================================ */
+
+/* Tablet (768px and below) */
+@media (max-width: 768px) {
+    .about-section-card {
+        padding: 30px 2%;
+        gap: 12px;
+    }
+
+    .card-row-one,
+    .card-row-two {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .card-row-one .about-card,
+    .card-row-two .about-card {
+        flex: 1 !important;
+    }
+
+    .why-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+    }
+}
+
+/* Mobile (600px and below) */
+@media (max-width: 600px) {
+    .about-section-card {
+        padding: 20px 2%;
+    }
+
+    .about-card {
+        padding: 16px;
+    }
+
+    .about-card h1 {
+        font-size: 1.2rem;
+    }
+
+    .about-card p {
+        font-size: 0.85rem;
+        line-height: 1.5;
+    }
+
+    .why-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .why-card {
+        padding: 16px;
+    }
+
+    .why-card h3 {
+        font-size: 1rem;
+    }
+
+    .why-card p {
+        font-size: 0.85rem;
+    }
+
+    .precision-section {
+        padding: 20px 12px;
+    }
+
+    .precision-btns {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        width: 100%;
+        font-size: 0.7rem;
+    }
+}
+
+/* Small Mobile (360px and below) */
+@media (max-width: 360px) {
+    .about-section-card {
+        padding: 15px 2%;
+    }
+
+    .about-card {
+        padding: 12px;
+    }
+
+    .about-card h1 {
+        font-size: 1rem;
+    }
+
+    .about-card p {
+        font-size: 0.8rem;
+    }
+
+    .stats-bar {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .stat-item {
+        border-right: none;
+        padding: 8px 0;
+        width: 100%;
+    }
+
+    .why-header {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .why-btn {
+        width: 100%;
+        font-size: 0.65rem;
+    }
+
+    .precision-btns button {
+        font-size: 0.65rem;
+        padding: 8px 10px;
+    }
 }

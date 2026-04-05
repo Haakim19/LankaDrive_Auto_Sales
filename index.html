@@ -1,20 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- ============================================
+     LankaDrive Auto Sales - Home Page
+     Company: LankaDrive Auto Sales (Pvt) Ltd
+     Purpose: Homepage showcasing featured vehicles and company services
+     ============================================ -->
 
 <head>
+    <!-- Meta Tags - Character encoding and viewport for responsive design -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Favicon -->
     <link rel="icon" type="image/png" href="Assets/image/logo101.png" sizes="32x32">
+
+    <!-- Stylesheets - Global and page-specific styles -->
     <link rel="stylesheet" href="css/Style.css">
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/index.css">
-    <title>Lanka Drive</title>
+
+    <title>Lanka Drive - Premium Vehicle Sales</title>
 </head>
 
 <body>
-    <!-- Site Header -->
+    <!-- ========== SITE HEADER / NAVIGATION ========== -->
+    <!-- Fixed navigation bar with logo, menu, and action buttons -->
     <header class="site-header">
+        <!-- Brand Logo and Company Name -->
         <div class="header-brand">
             <a href="index.html" class="brand-link">
                 <img src="Assets/image/logo101.png" alt="LankaDrive Auto Sales logo" class="brand-logo">
@@ -22,9 +35,11 @@
             </a>
         </div>
 
+        <!-- Mobile Navigation Toggle -->
         <input type="checkbox" id="nav-toggle" hidden>
         <label for="nav-toggle" class="nav-hamburger" aria-label="Toggle navigation">&#9776;</label>
 
+        <!-- Main Navigation Links -->
         <nav class="main-nav" aria-label="Main navigation">
             <a href="index.html" aria-current="page">Home</a>
             <a href="about.html">About Us</a>
@@ -33,13 +48,16 @@
             <a href="reviews.html">Reviews</a>
             <a href="contact.html">Contact Us</a>
         </nav>
+
+        <!-- Header Action Buttons -->
         <div class="header-btn">
             <a href="contact.html" class="btn-secondary">Book Test Drive</a>
             <a href="#" class="btn-primary">Enquire Now</a>
         </div>
     </header>
 
-    <!-- Hero Section -->
+    <!-- ========== HERO SECTION ========== -->
+    <!-- Large banner with background image, headline, and call-to-action -->
     <section class="Hero" aria-label="Hero banner">
         <img class="Hero-image" src="Assets/image/porsche-911.jpg" alt="Hero-Img">
         <div class="hero-content">
@@ -48,6 +66,8 @@
             <p class="hero-paragraph p2">Experience the Ultimate Collection of Japanese and Eropean <br>
                 Performance Vehicles. hands-selected for the<br> discerning Sri Lankan
                 Driver who Demands Nothing Less than Perfection</p>
+
+            <!-- Call-to-Action Buttons -->
             <div class="hero-actions">
                 <button class="btn-primary">Explore Inventory
                     <img src="Assets/icons/arrow_right_alt_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt=""
@@ -59,6 +79,7 @@
             </div>
         </div>
 
+        <!-- Statistics Bar - Key metrics -->
         <div class="stats-bar">
             <div class="stat-item">
                 <h2 class="stat-number">500+</h2>
@@ -75,10 +96,12 @@
         </div>
     </section>
 
-    <!-- Main Content -->
+    <!-- ========== MAIN CONTENT ========== -->
     <main>
-        <!-- Intro Section -->
+        <!-- ========== INTRO SECTION ========== -->
+        <!-- Company introduction with description and imagery -->
         <section class="section section-surface section-intro">
+            <!-- Left Content - Company Description -->
             <div class="section-content">
                 <span class="section-label">Welcome to LankaDrive</span>
                 <h1 class="section-title">The Art of the Drive</h1>
@@ -90,6 +113,8 @@
                     vehicle
                     in our collection meets rigorous standards of performance,
                     provenance, and aestetic perfection.</p>
+
+                <!-- Profile Section -->
                 <div class="profile-bar">
                     <img src="Assets/image/profile image.jpg" alt="Profile" class="profile-img">
                     <div class="profile-item">
@@ -98,14 +123,18 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Right Content - Images -->
             <div class="section-image">
                 <img src="Assets/image/steering weel.jpg" alt="Image-01" class="img-01">
                 <img src="Assets/image/car-front.jpg" alt="Image-02" class="img-02">
             </div>
         </section>
 
-        <!-- Featured Inventory Section -->
+        <!-- ========== FEATURED INVENTORY SECTION ========== -->
+        <!-- Vehicle Image Gallery - Featured vehicles with details -->
         <section class="section section-surface section-featured ">
+            <!-- Section Header -->
             <div class="featured-header">
                 <div>
                     <span class="section-label">Vehicle Image Gallery</span>
@@ -114,8 +143,9 @@
                 <a href="vehicles.html" class="view-all-link">View Full Inventory →</a>
             </div>
 
+            <!-- Featured Vehicles Grid -->
             <div class="featured-grid">
-
+                <!-- Vehicle Card 1 -->
                 <div class="feat-card">
                     <span class="feat-badge">Pre-Owned Luxury</span>
                     <img src="Assets/image/img01.jpg" alt="2024 Grand Tourer Luxe">
@@ -133,6 +163,7 @@
                     </div>
                 </div>
 
+                <!-- Vehicle Card 2 -->
                 <div class="feat-card">
                     <span class="feat-badge">Brand New</span>
                     <img src="Assets/image/lexus_01.jpg" alt="Command SUV">
@@ -150,6 +181,7 @@
                     </div>
                 </div>
 
+                <!-- Vehicle Card 3 -->
                 <div class="feat-card">
                     <span class="feat-badge">Pre-Owned Luxury</span>
                     <img src="Assets/image/ferarri-hero.png" alt="Executive P8">
@@ -170,32 +202,43 @@
             </div>
         </section>
 
-        <!-- Promotional Section -->
+        <!-- ========== PROMOTIONAL SECTION ========== -->
+        <!-- Special offer highlighting new vehicle arrival -->
         <section class="promo-section">
+            <!-- Promo Text Content -->
             <div class="promo-content">
                 <span class="promo-badge">Exclusive Opportunity</span>
                 <h2 class="promo-title">The 2024 Land Cruiser<br><span>Now Arriving</span></h2>
                 <p class="promo-text">Secure your spot for the first shipment of the all-new 2024
                     LC300 units. Unrivaled luxury meets legendary capability.
                     Financing options available with primary bank partners in Sri Lanka.</p>
+
+                <!-- Promo Action Buttons -->
                 <div class="promo-actions">
                     <a class="btn-primary" href="contact.html">Inquire Now</a>
-                    <a href="Assets/LC250-Prado-E-Brochure.pdf" class="promo-link" download="LC250-Prado-E-Brochure.pdf">Download Brochure</a>
+                    <a href="Assets/LC250-Prado-E-Brochure.pdf" class="promo-link"
+                        download="LC250-Prado-E-Brochure.pdf">Download Brochure</a>
                 </div>
             </div>
+
+            <!-- Promo Image -->
             <div class="promo-image">
                 <img src="Assets/image/land-crucer.jpg" alt="2024 Land Cruiser">
             </div>
         </section>
 
-        <!-- Contact and Location Section -->
+        <!-- ========== MAP & LOCATION SECTION ========== -->
+        <!-- Contact location with embedded map and quick inquiry form -->
         <section class="map-section">
+            <!-- Google Map Embed -->
             <div class="map-container">
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15842.804691916443!2d79.86330542806779!3d6.926278575695923!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2slk!4v1774868641482!5m2!1sen!2slk"
                     width="100%" height="100%" style="border: 0;" allowfullscreen="" loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade">
                 </iframe>
+
+                <!-- Address Card Overlay -->
                 <div class="map-address-card">
                     <span class="map-address-label">Visit Our Flagship</span>
                     <h3>452 Galle Rd, Colombo 03</h3>
@@ -203,14 +246,18 @@
                 </div>
             </div>
 
+            <!-- Map Right Section - Call-to-Action and Quick Form -->
             <div class="map-right">
+                <!-- CTA Text -->
                 <div class="data-content">
                     <h2 class="data-title">Start your journey today.</h2>
                     <p class="data-text">Whether you're looking for a specific model or need advice on luxury
                         automotive investments, our specialists are ready to assist.</p>
                 </div>
 
+                <!-- Quick Inquiry Form -->
                 <form action="#" method="get" class="map-form">
+                    <!-- Name and Phone Row -->
                     <div class="map-form-row">
                         <div class="input-wrap">
                             <label for="name">Name</label>
@@ -221,6 +268,8 @@
                             <input type="tel" id="phone">
                         </div>
                     </div>
+
+                    <!-- Vehicle Interest Dropdown -->
                     <div class="input-wrap">
                         <label for="interest">Interest</label>
                         <select id="interest" name="interest">
@@ -232,6 +281,8 @@
                             <option value="ford">Ford</option>
                         </select>
                     </div>
+
+                    <!-- Submit Button -->
                     <button type="submit">Submit Inquiry</button>
                 </form>
             </div>
@@ -239,12 +290,16 @@
         </section>
     </main>
 
-    <!-- Site Footer -->
+    <!-- ========== SITE FOOTER ========== -->
+    <!-- Footer with company info, contact details, social links, and newsletter subscription -->
     <footer class="site-footer">
         <div class="footer-inner">
+            <!-- Footer Brand Section -->
             <div class="footer-brand">
                 <h3>Lanka Drive</h3>
                 <p>Sri Lanka's premier showroom for luxury and exotic automobiles. Precision in every detail.</p>
+
+                <!-- Social Media Links -->
                 <div class="social-links">
                     <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a>
                     <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
@@ -252,6 +307,7 @@
                 </div>
             </div>
 
+            <!-- Contact Information -->
             <div class="footer-contact">
                 <h4>Contact</h4>
                 <p>452 Galle Rd, Colombo 03, Sri Lanka</p>
@@ -260,6 +316,7 @@
                 <p>drive@lankadrive.lk</p>
             </div>
 
+            <!-- Newsletter Subscription -->
             <div class="footer-newsletter">
                 <h4>Newsletter</h4>
                 <p>Receive exclusive updates on new inventory arrivals.</p>

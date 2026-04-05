@@ -29,6 +29,88 @@ a {
     text-decoration: none;
 }
 
+/* ================================================
+   ANIMATIONS - Keyframe Definitions
+   ================================================ */
+
+/* Fade-in animation - elements appear smoothly */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Slide-in from left animation */
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Slide-in from right animation */
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Slide-in from bottom animation - for cards and sections */
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Scale animation - elements grow smoothly */
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Hover lift animation - slight upward movement on hover */
+@keyframes lift {
+    0% {
+        transform: translateY(0px);
+    }
+    100% {
+        transform: translateY(-8px);
+    }
+}
+
+/* Subtle pulse animation - for attention-grabbing elements */
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.8;
+    }
+}
+
 /* ---------- Buttons ---------- */
 .btn-primary,
 .btn-secondary,
@@ -46,7 +128,8 @@ a {
     letter-spacing: 0.2em;
     text-transform: uppercase;
     cursor: pointer;
-    transition: background-color 0.4s ease, color 0.4s ease, border-color 0.25s ease, transform 0.2s ease;
+    transition: background-color 0.4s ease, color 0.4s ease, border-color 0.25s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    animation: fadeIn 0.6s ease-out backwards;
 }
 
 .btn-primary {
@@ -68,10 +151,11 @@ a {
 .btn-primary:hover,
 .btn-secondary:hover,
 .btn-therd:hover {
-    transform: translateY(-1px);
+    transform: translateY(-3px);
     background-color: #1d2529;
     color: #ffffff;
     border-color: #1d2529;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .btn-primary:disabled,
@@ -117,6 +201,7 @@ a {
     flex-direction: column;
     gap: 0;
     font-family: "Space Grotesk", sans-serif;
+    animation: slideInLeft 0.8s ease-out 0.2s backwards;
 }
 
 .hero-paragraph {
@@ -124,6 +209,7 @@ a {
     font-size: 1rem;
     letter-spacing: 0.24em;
     color: rgba(247, 249, 251, 0.95);
+    animation: fadeIn 0.8s ease-out 0.4s backwards;
 }
 
 .p1 {
@@ -147,6 +233,7 @@ a {
     line-height: 1.05;
     letter-spacing: -0.02em;
     color: #ffffff;
+    animation: slideInLeft 0.8s ease-out 0.3s backwards;
 }
 
 /* Italic coloured word inside h1 */
@@ -161,12 +248,18 @@ a {
     gap: 12px;
     align-items: center;
     margin-top: 32px;
+    animation: slideInLeft 0.8s ease-out 0.5s backwards;
 }
 
 .btn-primary img {
     width: 18px;
     height: 18px;
     margin-left: 8px;
+}
+
+/* Image swap on button hover - shows alternate image on hover */
+.default-img {
+    display: inline-block;
 }
 
 .hover-img {
@@ -187,6 +280,7 @@ a {
     margin: 0 auto;
     padding: 48px 32px;
     margin-top: 2%;
+    animation: fadeIn 0.8s ease-out;
 }
 
 .section-surface {
@@ -217,6 +311,7 @@ a {
     flex: 1;
     padding: 20px 20px 20px 20px;
     border-radius: 10px;
+    animation: slideInLeft 0.8s ease-out;
 }
 
 .section-title {
@@ -248,6 +343,7 @@ a {
     flex-direction: row;
     gap: 12px;
     flex: 1;
+    animation: slideInRight 0.8s ease-out;
 }
 
 .section-image img {
@@ -390,3 +486,140 @@ a {
     }
 }
 
+  /* ================================================
+     ADDITIONAL RESPONSIVE BREAKPOINTS
+     Optimizing for all device sizes: 320px - 1920px
+     ================================================ */
+
+  /* Tablet & Large Mobile (600px and below) */
+  @media (max-width: 600px) {
+      /* Button responsive sizing */
+      .btn-primary,
+      .btn-secondary,
+      .btn-therd {
+          padding: 8px 14px;
+          font-size: 0.62rem;
+          min-height: 38px;
+      }
+
+      /* Hero section tablet adjustments */
+      .Hero {
+          min-height: 300px;
+      }
+
+      .Hero-image {
+          height: 300px;
+      }
+
+      .Hero h1 {
+          font-size: 2.2rem;
+      }
+
+      /* Section spacing for tablet */
+      .section {
+          padding: 24px 14px;
+      }
+
+      .section-content {
+          width: 100%;
+      }
+
+      .section-image img {
+          height: 400px;
+      }
+  }
+
+  /* Small Mobile (480px and below) */
+  @media (max-width: 480px) {
+      /* Hero section for small phones */
+      .Hero {
+          min-height: 260px;
+      }
+
+      .Hero-image {
+          height: 260px;
+      }
+
+      .Hero h1 {
+          font-size: 1.8rem;
+          max-width: 10ch;
+      }
+
+      .hero-paragraph {
+          font-size: 0.8rem;
+      }
+
+      .stats-bar {
+          flex-direction: column;
+          gap: 12px;
+      }
+
+      .stat-item {
+          padding: 12px;
+      }
+
+      /* Button sizing for small screens */
+      .btn-primary,
+      .btn-secondary {
+          font-size: 0.58rem;
+          padding: 7px 12px;
+      }
+
+      .brand-logo {
+          width: 36px;
+          height: 36px;
+      }
+
+      .section-title {
+          font-size: 1.6rem;
+      }
+  }
+
+  /* Extra Small Mobile (360px and below) */
+  @media (max-width: 360px) {
+      .Hero {
+          min-height: 220px;
+      }
+
+      .Hero-image {
+          height: 220px;
+      }
+
+      .Hero h1 {
+          font-size: 1.2rem;
+      }
+
+      .btn-primary,
+      .btn-secondary {
+          padding: 6px 10px;
+          font-size: 0.55rem;
+      }
+
+      .section {
+          padding: 16px 8px;
+      }
+
+      .section-title {
+          font-size: 1.3rem;
+      }
+  }
+
+  /* Large Desktop (1400px and above) */
+  @media (min-width: 1400px) {
+      .section {
+          max-width: 1360px;
+          margin: 0 auto;
+      }
+
+      .Hero h1 {
+          font-size: 5.8rem;
+      }
+
+      .section-title {
+          font-size: 2.8rem;
+      }
+
+      .section {
+          padding: 64px 48px;
+      }
+  }

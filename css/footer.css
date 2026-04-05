@@ -1,10 +1,17 @@
-/* --------------------------------- Footer ------------------------------------------ */
+/* ================================================
+   FOOTER STYLES
+   Company information, contact details, and newsletter
+   ================================================ */
+
+/* ===== Footer Container ===== */
 .site-footer {
 	margin-top: 40px;
 	padding: 48px 32px;
 	background: #f0f4f7;
+	animation: fadeIn 0.8s ease-out;
 }
 
+/* ===== Footer Inner Grid ===== */
 .footer-inner {
 	max-width: 1280px;
 	margin: 0 auto;
@@ -13,6 +20,7 @@
 	gap: 24px;
 }
 
+/* ===== Footer Typography ===== */
 .site-footer h3,
 .site-footer h4 {
 	margin-bottom: 12px;
@@ -34,11 +42,13 @@
 	line-height: 1.65;
 }
 
+/* ===== Social Links ===== */
 .social-links {
 	display: flex;
 	flex-wrap: wrap;
 	gap: 10px;
 	margin-top: 14px;
+	animation: slideInUp 0.6s ease-out backwards;
 }
 
 .social-links a {
@@ -51,18 +61,51 @@
 	font-size: 0.7rem;
 	letter-spacing: 0.18em;
 	text-transform: uppercase;
+	transition: all 0.3s ease;
+	animation: fadeIn 0.6s ease-out backwards;
 }
+
+/* Stagger animation for social links */
+.social-links a:nth-child(1) { animation-delay: 0.1s; }
+.social-links a:nth-child(2) { animation-delay: 0.15s; }
+.social-links a:nth-child(3) { animation-delay: 0.2s; }
 
 .social-links a:hover {
 	color: #1f2b3f;
+	background-color: #e8ecf0;
+	transform: translateY(-4px);
 }
 
+/* ===== Newsletter Form ===== */
 .newsletter-form {
 	display: grid;
 	grid-template-columns: 1fr auto;
 	gap: 8px;
 }
 
+/* Newsletter Input */
+.newsletter-form input {
+    width: 100%;
+    padding: 12px 14px;
+    border: 0;
+    border-bottom: 2px solid transparent;
+    border-radius: 4px;
+    background: #ffffff;
+    color: #1f2b3f;
+    font: inherit;
+    transition: border-color 0.3s ease;
+}
+
+.newsletter-form input:focus {
+    outline: none;
+    border-bottom-color: #565e74;
+}
+
+.newsletter-form input::placeholder {
+	color: #a0aec0;
+}
+
+/* Newsletter Submit Button */
 .newsletter-form button {
 	min-height: 42px;
 	padding: 0 16px;
@@ -75,25 +118,142 @@
 	font-size: 0.7rem;
 	letter-spacing: 0.16em;
 	text-transform: uppercase;
+	transition: all 0.3s ease;
+	white-space: nowrap;
 }
 
 .newsletter-form button:hover {
 	filter: brightness(1.06);
+	transform: translateY(-1px);
 }
 
-/* ---------- Forms ---------- */
-.newsletter-form input {
-    width: 100%;
-    padding: 12px 14px;
-    border: 0;
-    border-bottom: 2px solid transparent;
-    border-radius: 4px;
-    background: #ffffff;
-    color: #1f2b3f;
-    font: inherit;
+.newsletter-form button:active {
+	transform: translateY(0);
 }
 
-.newsletter-form input:focus {
-    outline: none;
-    border-bottom-color: #565e74;
+/* ================================================
+   RESPONSIVE DESIGN - Footer
+   ================================================ */
+
+/* Tablet (1024px and below) */
+@media (max-width: 1024px) {
+	.footer-inner {
+		grid-template-columns: 1fr 1fr;
+		gap: 20px;
+	}
+
+	.site-footer {
+		padding: 40px 24px;
+	}
+}
+
+/* Small Tablet (768px and below) */
+@media (max-width: 768px) {
+	.footer-inner {
+		grid-template-columns: 1fr;
+		gap: 30px;
+	}
+
+	.site-footer {
+		padding: 32px 20px;
+		margin-top: 30px;
+	}
+
+	.newsletter-form {
+		grid-template-columns: 1fr;
+	}
+
+	.newsletter-form button {
+		width: 100%;
+	}
+
+	.social-links {
+		justify-content: space-between;
+	}
+
+	.social-links a {
+		flex: 1 1 auto;
+		text-align: center;
+	}
+}
+
+/* Mobile (600px and below) */
+@media (max-width: 600px) {
+	.site-footer {
+		padding: 24px 16px;
+		margin-top: 24px;
+	}
+
+	.footer-inner {
+		gap: 20px;
+	}
+
+	.site-footer h3 {
+		font-size: 1rem;
+	}
+
+	.site-footer h4 {
+		font-size: 0.7rem;
+		margin-bottom: 10px;
+	}
+
+	.site-footer p {
+		font-size: 0.85rem;
+		margin-bottom: 8px;
+	}
+
+	.social-links {
+		gap: 8px;
+	}
+
+	.social-links a {
+		padding: 6px 8px;
+		font-size: 0.65rem;
+	}
+
+	.newsletter-form input {
+		padding: 10px 12px;
+		font-size: 0.9rem;
+	}
+
+	.newsletter-form button {
+		padding: 0 12px;
+		min-height: 38px;
+		font-size: 0.65rem;
+	}
+}
+
+/* Small Mobile (360px and below) */
+@media (max-width: 360px) {
+	.site-footer {
+		padding: 16px 12px;
+	}
+
+	.site-footer h3 {
+		font-size: 0.9rem;
+	}
+
+	.site-footer h4 {
+		font-size: 0.65rem;
+	}
+
+	.site-footer p {
+		font-size: 0.8rem;
+	}
+
+	.social-links {
+		flex-wrap: wrap;
+		gap: 6px;
+	}
+
+	.social-links a {
+		padding: 5px 6px;
+		font-size: 0.6rem;
+	}
+
+	.newsletter-form input,
+	.newsletter-form button {
+		font-size: 0.8rem;
+		min-height: 36px;
+	}
 }

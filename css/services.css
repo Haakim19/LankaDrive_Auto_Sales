@@ -104,6 +104,41 @@
     gap: 16px;
     border: 1px solid #e5e7eb;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    animation: slideInUp 0.6s ease-out backwards;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Service icons - keep them compact and consistent */
+.service-card > img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    display: block;
+    flex-shrink: 0;
+    align-self: flex-start;
+}
+
+.service-badge > img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    display: block;
+    flex-shrink: 0;
+    align-self: center;
+}
+
+/* Stagger animation for service cards */
+.card-row-one .service-card:nth-child(1) { animation-delay: 0.1s; }
+.card-row-one .service-card:nth-child(2) { animation-delay: 0.2s; }
+.card-row-two .service-card:nth-child(1) { animation-delay: 0.3s; }
+.card-row-two .service-card:nth-child(2) { animation-delay: 0.4s; }
+.card-row-three .service-card:nth-child(1) { animation-delay: 0.5s; }
+.card-row-three .service-card:nth-child(2) { animation-delay: 0.6s; }
+
+/* Hover effect - lift card */
+.service-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 .card-detail h3 {
@@ -116,6 +151,7 @@
     color: #6b7280;
 }
 
+/* Button styles - shared base styles */
 .btn-one,
 .btn-two {
     padding: 10px;
@@ -130,15 +166,20 @@
     font-family: "Space Grotesk", sans-serif;
 }
 
+/* Button one - specific positioning */
 .btn-one {
     margin-top: 8%;
     width: 30%;
 }
 
+/* Button two - specific positioning */
 .btn-two {
     margin-top: 23%;
+    font-size: 0.9rem;
+    text-align: center;
 }
 
+/* Hover state for both buttons */
 .btn-one:hover,
 .btn-two:hover {
     background: #1a2035;
@@ -172,11 +213,6 @@
     font-size: 0.8rem;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-}
-img{
-    width: 40px;
-    height: 40px;
-    color: #6b7280 ;
 }
 .badge {
     background: #ccd4ee;
@@ -249,4 +285,117 @@ img{
     display: flex;
     gap: 16px;
     justify-content: center;
+}
+
+/* ================================================
+   RESPONSIVE DESIGN - Services Page
+   ================================================ */
+
+/* Tablet (768px and below) */
+@media (max-width: 768px) {
+    .service-card-section {
+        padding: 20px 12px;
+    }
+
+    .card-row-one,
+    .card-row-two,
+    .card-row-three {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .service-card {
+        padding: 16px;
+    }
+
+    .end-section {
+        padding: 20px 12px;
+    }
+}
+
+/* Mobile (600px and below) */
+@media (max-width: 600px) {
+    .hero {
+        min-height: 300px;
+    }
+
+    .hero-image {
+        height: 300px;
+    }
+
+    .service-card-section {
+        padding: 15px 8px;
+    }
+
+    .service-card h3 {
+        font-size: 1rem;
+    }
+
+    .service-card p {
+        font-size: 0.85rem;
+    }
+
+    .service-card > img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .service-badge > img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .service-stats {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .btn-one, .btn-two,
+    .service-link {
+        font-size: 0.7rem;
+        padding: 10px 12px;
+    }
+}
+
+/* Small Mobile (360px and below) */
+@media (max-width: 360px) {
+    .hero {
+        min-height: 250px;
+    }
+
+    .hero-image {
+        height: 250px;
+    }
+
+    .service-card {
+        padding: 12px;
+    }
+
+    .service-card h3 {
+        font-size: 0.9rem;
+    }
+
+    .service-card p {
+        font-size: 0.8rem;
+    }
+
+    .service-card > img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .service-badge > img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .btns {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .btns button {
+        width: 100%;
+        font-size: 0.68rem;
+    }
 }

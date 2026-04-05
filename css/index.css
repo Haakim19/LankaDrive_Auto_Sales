@@ -1,4 +1,11 @@
-/* ── Stats Bar (bottom-right of hero) ── */
+/* ================================================
+   INDEX.CSS - Home Page Styles
+   Purpose: Styles for homepage sections including
+   stats bar, featured inventory, and promotional content
+   ================================================ */
+
+/* ===== Stats Bar ===== */
+/* Statistics display positioned on hero section */
 .stats-bar {
     position: absolute;
     z-index: 3;
@@ -97,6 +104,27 @@
     background: #ccd4eb;
     border-radius: 16px;
     overflow: hidden;
+    animation: slideInUp 0.6s ease-out backwards;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Stagger animation for each card */
+.feat-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.feat-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.feat-card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+/* Hover effect - lift card up */
+.feat-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.15);
 }
 
 .feat-card img {
@@ -195,6 +223,7 @@
     );
     border-radius: 16px;
     margin: 32px;
+    animation: slideInUp 0.8s ease-out;
 }
 
 .promo-content {
@@ -203,6 +232,7 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+    animation: slideInLeft 0.8s ease-out 0.2s backwards;
 }
 
 .promo-badge {
@@ -216,6 +246,7 @@
     letter-spacing: 0.2em;
     text-transform: uppercase;
     font-family: "Space Grotesk", sans-serif;
+    animation: slideInLeft 0.8s ease-out 0.3s backwards;
 }
 
 .promo-title {
@@ -225,6 +256,7 @@
     line-height: 1.1;
     color: #1f2b3f;
     margin: 0;
+    animation: slideInLeft 0.8s ease-out 0.4s backwards;
 }
 
 .promo-title span {
@@ -239,12 +271,14 @@
     line-height: 1.7;
     max-width: 500px;
     margin: 0;
+    animation: slideInLeft 0.8s ease-out 0.5s backwards;
 }
 
 .promo-actions {
     display: flex;
     align-items: center;
     gap: 24px;
+    animation: slideInLeft 0.8s ease-out 0.6s backwards;
 }
 
 .promo-link {
@@ -255,17 +289,20 @@
     text-decoration: none;
     border-bottom: 1px solid #1f2b3f;
     padding-bottom: 2px;
+    transition: all 0.3s ease;
 }
 
 .promo-link:hover {
     color: #526074;
     border-bottom-color: #526074;
+    transform: translateX(2px);
 }
 
 .promo-image {
     flex: 1;
     display: flex;
     justify-content: flex-end;
+    animation: slideInRight 0.8s ease-out 0.2s backwards;
 }
 
 .promo-image img {
@@ -432,4 +469,158 @@
 
 .map-form button:hover {
     background: #526074;
+}
+/* ================================================
+   RESPONSIVE DESIGN - Home Page
+   ================================================ */
+
+/* Tablet (768px and below) */
+@media (max-width: 768px) {
+    .stats-bar {
+        bottom: 20px;
+        right: 20px;
+        padding: 12px;
+    }
+
+    .stat-item {
+        padding: 0 10px;
+    }
+
+    .stat-number {
+        font-size: 24px;
+    }
+
+    .stat-label {
+        font-size: 9px;
+    }
+
+    .profile-img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .featured-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+    }
+
+    .promo-section {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .map-section {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .map-form {
+        width: 100%;
+    }
+}
+
+/* Mobile (600px and below) */
+@media (max-width: 600px) {
+    .stats-bar {
+        position: static;
+        width: calc(100% - 30px);
+        margin: 20px 15px;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .stat-item {
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+        padding: 8px 0;
+        width: 100%;
+    }
+
+    .stat-item:last-child {
+        border-bottom: none;
+    }
+
+    .stat-number {
+        font-size: 20px;
+    }
+
+    .featured-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .profile-img {
+        width: 45px;
+        height: 45px;
+    }
+
+    .promo-section {
+        padding: 20px 12px;
+    }
+
+    .promo-title {
+        font-size: 1.5rem;
+    }
+
+    .map-container,
+    .map-right {
+        flex: 1;
+        width: 100%;
+    }
+
+    .map-form-row {
+        flex-direction: column;
+    }
+
+    .map-form input,
+    .map-form select {
+        padding: 10px 12px;
+        font-size: 0.85rem;
+    }
+
+    .map-form button {
+        padding: 12px;
+        font-size: 0.7rem;
+    }
+}
+
+/* Small Mobile (360px and below) */
+@media (max-width: 360px) {
+    .stats-bar {
+        margin: 15px 10px;
+        padding: 10px;
+        bottom: auto;
+        right: auto;
+    }
+
+    .stat-number {
+        font-size: 18px;
+    }
+
+    .stat-label {
+        font-size: 8px;
+    }
+
+    .profile-bar {
+        flex-wrap: wrap;
+    }
+
+    .promo-section {
+        padding: 15px 8px;
+    }
+
+    .promo-title {
+        font-size: 1.2rem;
+    }
+
+    .map-address-card {
+        padding: 10px;
+        border-radius: 6px;
+    }
+
+    .map-form input,
+    .map-form select {
+        padding: 8px 10px;
+        font-size: 0.8rem;
+    }
 }
