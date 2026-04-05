@@ -1,0 +1,227 @@
+.about-section-card{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 40px 2%;
+    background: #f0f2f5;
+    
+}
+
+.card-row-one,
+.card-row-two {
+    display: flex;
+    gap: 16px;
+}
+
+/* Row 1 - Card 1 bigger, Card 2 smaller */
+.card-row-one .about-card:nth-child(1) {
+    flex: 2;
+}
+.card-row-one .about-card:nth-child(2) {
+    flex: 1;
+}
+
+/* Row 2 - Card 1 smaller, Card 2 bigger */
+.card-row-two .about-card:nth-child(1) {
+    flex: 1;
+}
+.card-row-two .about-card:nth-child(2) {
+    flex: 2;
+}
+
+.about-card{
+    position: relative;
+    gap: 20px;
+    height: 20rlh;
+    border-radius: 10px;
+}
+.about-card .showroom{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    object-position: bottom;
+    border-radius: 10px;
+    padding: 0;
+}
+
+.about-card .icon{
+    height: 40px;
+    width: 40px;
+    margin-bottom: 100px;
+}
+
+.card-one, .mission-card, .vision-card{
+    padding: 40px 40px;
+    
+}
+.about-card h1{
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 2rem;
+}
+
+.about-card p{
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 1rem;
+}
+
+.card-one{
+    background:#52607439;
+
+}
+.vision-card{
+    background:#ccd4ee;
+}
+.mission-card{
+    background:#4a77b675;
+}
+.card-badge{
+    
+    position: absolute;
+    bottom: 22px;
+    right: 12px;
+    background: rgba(0, 0, 0, 0.55);
+    color: #ffffff;
+    font-size: 0.82rem;
+    font-weight: 900;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 4px;
+    backdrop-filter: blur(4px);
+    z-index: 1;
+}
+
+.stats-bar{
+    display: flex;
+    margin-top: 40px;
+    gap: 30px;
+}
+
+.stat-item h2{
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 3rem;
+    color: #7d98f2;
+}
+
+.stat-item p {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 1rem;
+    letter-spacing: 0.2rem;
+}
+
+.why-section {
+    padding: 60px 4%;
+    background: #f8f9fa;
+}
+
+.why-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 50px;
+}
+
+.why-label {
+    color: #8892b0;
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.why-header-left h2 {
+    color: #1a2035;
+    font-size: 2.5rem;
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 800;
+    max-width: 500px;
+    line-height: 1.2;
+}
+
+.why-btn {
+    background: transparent;
+    color: #1a2035;
+    border: 1px solid #1a2035;
+    padding: 14px 24px;
+    font-size: 0.75rem;
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    white-space: nowrap;
+    margin-top: 10px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.why-btn:hover {
+    background: #1a2035;
+    color: #ffffff;
+}
+
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.why-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+    
+    margin-bottom: 16px;
+}
+
+.why-card h3 {
+    color: #1a2035;
+    font-size: 1.1rem;
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.why-card p {
+    color: #6b7280;
+    font-size: 0.85rem;
+    line-height: 1.6;
+}
+
+.precision-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 100px 4%;
+    background: #dde3ec;
+    margin: 0 30px;
+    border-radius: 12px;
+}
+
+.precision-section h2 {
+    color: #1a2035;
+    font-size: 2.2rem;
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 800;
+    margin-bottom: 16px;
+}
+
+.precision-section p {
+    color: #8892b0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    max-width: 520px;
+    margin-bottom: 36px;
+}
+
+.precision-btns {
+    display: flex;
+    gap: 16px;
+    
+}
+
+.btn-presition{
+    color: #1a2035;
+    border-color: #1a2035;
+}
