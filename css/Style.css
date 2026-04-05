@@ -31,7 +31,8 @@ a {
 
 /* ---------- Buttons ---------- */
 .btn-primary,
-.btn-secondary {
+.btn-secondary,
+.btn-therd {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -55,11 +56,18 @@ a {
 
 .btn-secondary {
     background: transparent;
+    color: #1d2529;
+    border-color:#1d2529;
+}
+.btn-therd{
+    background:transparent;
     color: #ffffff;
+    
 }
 
 .btn-primary:hover,
-.btn-secondary:hover {
+.btn-secondary:hover,
+.btn-therd:hover {
     transform: translateY(-1px);
     background-color: #1d2529;
     color: #ffffff;
